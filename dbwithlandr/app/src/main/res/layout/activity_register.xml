@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backimg"
+    android:foregroundTint="#00504848"
+    android:id="@+id/constraintLayout"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/butcherman"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <EditText
+        android:id="@+id/rfirstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#E48E8E"
+        android:ems="7"
+        android:fontFamily="@font/allan"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/rlastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/allan"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#E48E8E"
+        android:ems="7"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rfirstname"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/remail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/allan"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#E48E8E"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rlastname"
+        app:layout_constraintStart_toStartOf="@+id/rfirstname"
+        app:layout_constraintTop_toBottomOf="@+id/rfirstname" />
+
+
+    <EditText
+        android:id="@+id/rnumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#E48E8E"
+        android:drawablePadding="10dp"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/allan"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rlastname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rfirstname"
+        app:layout_constraintTop_toBottomOf="@+id/rfirstname" />
+
+    <Spinner
+        android:id="@+id/rcountry"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="136dp"
+        android:contentDescription="@string/title_activity_scrolling"
+        android:drawablePadding="10dp"
+        android:background="#E48E8E"
+        android:fontFamily="@font/allan"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:popupBackground="#E48E8E"
+        app:layout_constraintEnd_toEndOf="@+id/rlastname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rfirstname"
+        app:layout_constraintTop_toBottomOf="@+id/rfirstname" />
+
+    <RadioGroup
+        android:id="@+id/gendergroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/allan"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/rcountry"
+        app:layout_constraintTop_toBottomOf="@+id/rcountry">
+
+        <RadioButton
+            android:id="@+id/maler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/allan"
+            android:checked="true"
+            android:text="Male"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/femaler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allan"
+            android:layout_marginEnd="5dp"
+            android:buttonTint="@color/white"
+            android:text="Female"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/otherr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allan"
+            android:buttonTint="@color/white"
+            android:text="Other"
+            android:textColor="@color/white" />
+
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/rconfirmpassword"
+        android:fontFamily="@font/allan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#E48E8E"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rcountry"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rcountry"
+        app:layout_constraintTop_toBottomOf="@+id/rcountry" />
+
+    <EditText
+        android:id="@+id/rpassword"
+        android:fontFamily="@font/allan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#E48E8E"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rcountry"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rcountry"
+        app:layout_constraintTop_toBottomOf="@+id/rcountry" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:fontFamily="@font/allan"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_bg"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/rconfirmpassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rconfirmpassword"
+        app:layout_constraintTop_toBottomOf="@+id/rconfirmpassword" />
+
+    <TextView
+        android:id="@+id/ahaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/allan"
+        android:shadowColor="@color/white"
+        android:text="Already have an account, "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+    <TextView
+        android:id="@+id/rsingup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/allan"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:shadowColor="@color/colorRed"
+        android:text="Click here to Login"
+        android:textColor="#FBF8F8"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ahaa"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+</androidx.constraintlayout.widget.ConstraintLayout>
